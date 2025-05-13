@@ -32,7 +32,7 @@ def get_information():
         if len(matris2) < n:
             matris(n,b+n, matris1, matris2, b)
         return matris2
-    return matris(len(n),len(n), matris1, matris2), helper_matris
+    return matris(len(n),len(n), matris1, matris2), helper_matris, R
 
 
 def varshal(matris:list, n:list):
@@ -67,11 +67,12 @@ def varshal(matris:list, n:list):
         for e in W:
             print(e)
         print()
-        print(f"w{i+1}: {set(help_list3)}")
+        print(f"w{i+1} = {set(help_list3)}")
         print()
 
 
-matris, n = get_information()
+matris, n, R= get_information()
+print("w0 = ",R,"\n")
 varshal(matris, n)
 
 time.sleep(30)
